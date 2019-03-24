@@ -54,9 +54,9 @@ public class ArrayQueue<E> implements Queue<E> {
         StringBuilder res = new StringBuilder();
         res.append("Queue: ");
         res.append("front [");
-        for(int i = 0 ; i < array.getSize() ; i ++) {
+        for (int i = 0 ; i < array.getSize() ; i ++) {
             res.append(array.get(i));
-            if(i != array.getSize() - 1) {
+            if (i != array.getSize() - 1) {
                 res.append(", ");
             }
         }
