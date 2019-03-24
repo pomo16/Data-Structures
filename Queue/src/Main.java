@@ -20,7 +20,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        int opCount = 100000;
+        int opCount = 1000000;
 
         ArrayQueue<Integer> arrayQueue = new ArrayQueue<>();
         double time1 = testQueue(arrayQueue, opCount);
@@ -31,5 +31,11 @@ public class Main {
         LoopQueue<Integer> loopQueue = new LoopQueue<>();
         double time2 = testQueue(loopQueue, opCount);
         System.out.println("LoopQueue, time:" + time2 + " s");
+
+        LinkedListQueue<Integer> linkedListQueue = new LinkedListQueue<>();
+        double time3 = testQueue(linkedListQueue, opCount);
+        System.out.println("LinkedListQueue, time:" + time3 + " s");
+
+        // LoopQueue 和 LinkedListQueue 是同级别的
     }
 }
