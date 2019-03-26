@@ -79,6 +79,20 @@ public class LinkedList<E> {
         size ++;
     }
 
+    // 向链表尾部添加新的元素，递归做法
+    public void addR(E e) {
+        dummyHead.next = addR(dummyHead.next, e);
+    }
+
+    private Node addR(Node node, E e) {
+        if(node == null){
+            size++;
+            return new Node(e);
+        }
+        node.next = addR(node.next, e);
+        return node;
+    }
+
     // 在链表头添加新的元素e
     public void addFirst(E e) {
         add(0, e);

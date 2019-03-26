@@ -1,9 +1,10 @@
 public class Main {
     public static void main(String[] args) {
         LinkedList<Integer> ll = new LinkedList<>();
-        ll.addLast(3);
-        ll.addLast(4);
-        ll.addFirst(4);
-        System.out.println(ll.toString());
+        for(int i = 0 ; i < 5 ; i++){
+            ll.addR(i);
+            System.out.println(i);
+            System.out.println(ll.toString());
+        }
     }
 }
