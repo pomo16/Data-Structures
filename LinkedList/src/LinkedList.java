@@ -193,7 +193,7 @@ public class LinkedList<E> {
         return remove(0);
     }
 
-    // 从链表中删除第一个元素，返回删除的元素
+    // 从链表中删除最后一个元素，返回删除的元素
     public E removeLast() {
         return remove(size - 1);
     }

@@ -55,7 +55,7 @@ public class Array<E> {
     }
 
     // 获取index索引位置的元素
-    E get(int index) {
+    public E get(int index) {
         if(index < 0 || index >= size) {
             throw new IllegalArgumentException("Get failed. Index is illegal.");
         }
