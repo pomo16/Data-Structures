@@ -248,15 +248,23 @@ public BST()
 
 #### 方法
 
-| 方法                           | 详解                                             |
-| ------------------------------ | ------------------------------------------------ |
-| `public int size()`            | 获取二分搜索树中的元素个数                       |
-| `public boolean isEmpty()`     | 判断二分搜索树是否为空                           |
-| `public void add(E e)`         | 向二分搜索树中添加新的元素e                      |
-| `public boolean contains(E e)` | 判断二分搜索树中是否包含元素e                    |
-| `public void preOrder()`       | 二分搜索树的前序遍历（深度优先遍历），递归写法   |
-| `public void preOrderNR()`     | 二分搜索树的前序遍历（深度优先遍历），非递归写法 |
-| `public void inOrder()`        | 二分搜索树的中序遍历（深度优先遍历）             |
-| `public void postOrder()`      | 二分搜索树的后序遍历（深度优先遍历）             |
-| `public String toString()`     | 转换为字符串                                     |
+| 方法                           | 详解                                                     |
+| ------------------------------ | -------------------------------------------------------- |
+| `public int size()`            | 获取二分搜索树中的元素个数                               |
+| `public boolean isEmpty()`     | 判断二分搜索树是否为空                                   |
+| `public void add(E e)`         | 向二分搜索树中添加新的元素e                              |
+| `public boolean contains(E e)` | 判断二分搜索树中是否包含元素e                            |
+| `public void preOrder()`       | 二分搜索树的前序遍历（深度优先遍历），递归写法           |
+| `public void preOrderNR()`     | 二分搜索树的前序遍历（深度优先遍历），非递归写法         |
+| `public void inOrder()`        | 二分搜索树的中序遍历（深度优先遍历）                     |
+| `public void postOrder()`      | 二分搜索树的后序遍历（深度优先遍历）                     |
+| `public void levelOrder()`     | 二分搜索树的层序遍历（广度优先遍历）                     |
+| `public E minimum()`           | 寻找二分搜索树的最小元素                                 |
+| `public E maximum()`           | 寻找二分搜索树的最大元素                                 |
+| `public E removeMin()`         | 从二分搜索树中删除最小值所在节点，返回最小值             |
+| `public E removeMinNR()`       | 从二分搜索树中删除最小值所在节点，返回最小值，非递归方法 |
+| `public E removeMax()`         | 从二分搜索树中删除最大值所在节点，返回最大值             |
+| `public E removeMaxNR()`       | 从二分搜索树中删除最大值所在节点，返回最大值，非递归方法 |
+| `public void remove(E e)`      | 从二分搜索树中删除元素为e的节点                          |
+| `public String toString()`     | 转换为字符串                                             |
 
