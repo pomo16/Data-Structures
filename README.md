@@ -243,7 +243,7 @@ public LoopQueue();		// 无参构造器，默认循环队列容量为10
 #### 构造器
 
 ```java
-public BST()
+public BST();
 ```
 
 #### 方法
