@@ -80,16 +80,16 @@ public class LinkedList<E> {
     }
 
     // 向链表尾部添加新的元素，递归做法
-    public void addR(E e) {
-        dummyHead.next = addR(dummyHead.next, e);
+    public void addLastR(E e) {
+        dummyHead.next = addLastR(dummyHead.next, e);
     }
 
-    private Node addR(Node node, E e) {
+    private Node addLastR(Node node, E e) {
         if(node == null){
             size++;
             return new Node(e);
         }
-        node.next = addR(node.next, e);
+        node.next = addLastR(node.next, e);
         return node;
     }
 
@@ -149,6 +149,23 @@ public class LinkedList<E> {
             cur = cur.next;
         }
         return false;
+    }
+
+    // 查找链表中是否有元素e，递归做法
+    public boolean containsR(E e) {
+        return containsR(dummyHead.next,e);
+    }
+
+    private boolean containsR(Node node, E e) {
+        if(node == null){
+            return false;
+        }
+
+        if(node.e.equals(e)){
+            return true;
+        } else {
+            return containsR(node.next, e);
+        }
     }
 
     // 从链表中删除index(0-based)位置的元素，返回删除的元素

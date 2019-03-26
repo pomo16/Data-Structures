@@ -44,7 +44,7 @@ public class BST<E extends Comparable<E>> {
             node.left = add(node.left, e);
         else if(e.compareTo(node.e) > 0)
             node.right = add(node.right, e);
-
+        // 这里没有 else 的情况是因为该二叉树对元素相等的情况不作处理，所以空出来表示什么都不做，切忌把上面的 else if 改成 else
         return node;
     }
 
@@ -66,4 +66,6 @@ public class BST<E extends Comparable<E>> {
         else // e.compareTo(node.e) > 0
             return contains(node.right, e);
     }
+
+    
 }
