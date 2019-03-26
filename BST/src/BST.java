@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 public class BST<E extends Comparable<E>> {
 
     private class Node{
@@ -67,5 +69,97 @@ public class BST<E extends Comparable<E>> {
             return contains(node.right, e);
     }
 
-    
+    // 二分搜索树的前序遍历，深度优先遍历
+    public void preOrder(){
+        preOrder(root);
+    }
+
+    // 前序遍历以node为根的二分搜索树, 递归算法
+    private void preOrder(Node node){
+        if(node == null)
+            return;
+
+        // 先访问然后左然后右
+        System.out.println(node.e);
+        preOrder(node.left);
+        preOrder(node.right);
+    }
+
+    // 二分搜索树的前序遍历，非递归写法
+    public void preOrderNR() {
+        Stack<Node> stack = new Stack<>();
+        stack.push(root);
+        while(!stack.isEmpty()) {
+            Node cur = stack.pop();
+            System.out.println(cur.e);
+
+            if(cur.right != null) {
+                stack.push(cur.right);
+            }
+            if(cur.left != null) {
+                stack.push(cur.left);
+            }
+        }
+    }
+
+    // 二分搜索树的中序遍历，深度优先遍历
+    public void inOrder() {
+        inOrder(root);
+    }
+
+    // 中序遍历以node为根的二分搜索树, 递归算法
+    // 中序遍历的结果是二分搜索树中所有元素排序排列的结果
+    public void inOrder(Node node) {
+
+        if(node == null)
+            return;
+
+        // 先左再访问再右
+        inOrder(node.left);
+        System.out.println(node.e);
+        inOrder(node.right);
+    }
+
+    // 二分搜索树的后序遍历，深度优先遍历
+    public void postOrder() {
+        postOrder(root);
+    }
+
+    // 后序遍历以node为根的二分搜索树, 递归算法
+    public void postOrder(Node node) {
+        if(node == null)
+            return;
+
+        // 先左右再访问
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.println(node.e);
+    }
+
+    @Override
+    public String toString(){
+        StringBuilder res = new StringBuilder();
+        generateBSTString(root, 0, res);
+        return res.toString();
+    }
+
+    // 生成以node为根节点，深度为depth的描述二叉树的字符串
+    private void generateBSTString(Node node, int depth, StringBuilder res){
+
+        if(node == null){
+            res.append(generateDepthString(depth) + "null\n");
+            return;
+        }
+
+        res.append(generateDepthString(depth) + node.e + "\n");
+        generateBSTString(node.left, depth + 1, res);
+        generateBSTString(node.right, depth + 1, res);
+    }
+
+    private String generateDepthString(int depth){
+        StringBuilder res = new StringBuilder();
+        for(int i = 0 ; i < depth ; i ++)
+            res.append("--");
+        return res.toString();
+    }
 }
