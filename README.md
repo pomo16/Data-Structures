@@ -10,7 +10,7 @@
   + [ArrayQueue](#ArrayQueue)
   + [LinkedListQueue](#LinkedListQueue)
   + [LoopQueue](#LoopQueue)
-+ [Binary Search Tree](#Binary Search Tree)
++ [Binary Search Tree](#Binary-Search-Tree)
 
 ## Array
 #### 构造器
