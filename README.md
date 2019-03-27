@@ -71,6 +71,7 @@ public LinkedList();	// 构造一个空链表，带有虚拟头结点
 | `public E remove(int index)`      | 从链表中删除index(0-based)位置的元素，返回删除的元素（在链表中不是一个常用的操作，练习用） |
 | `public E removeFirst()`          | 从链表中删除第一个元素，返回删除的元素                       |
 | `public E removeLast()`           | 从链表中删除最后一个元素，返回删除的元素                     |
+| `public void removeElement(E e)`  | 从链表中删除元素e                                            |
 | `public String toString()`        | 转换为字符串                                                 |
 
 
