@@ -11,6 +11,7 @@
   + [LinkedListQueue](#LinkedListQueue)
   + [LoopQueue](#LoopQueue)
 + [Binary Search Tree](#Binary-Search-Tree)
++ [MaxHeap](#MaxHeap)
 
 ## Array
 #### 构造器
@@ -41,6 +42,7 @@ public Array();	// 无参构造器，默认数组容量为10
 | `public E removeFirst()`             | 从数组中删除第一个元素，返回删除的元素                   |
 | `public E removeLast()`              | 从数组中删除最后一个元素，返回删除的元素                 |
 | `public void removeElement(E e)`     | 从数组中删除元素e                                        |
+| `public void swap(int i, int j)`     | 交换索引为i和索引为j的两个元素                           |
 | `public String toString()`           | 转换为字符串                                             |
 
 
@@ -268,4 +270,25 @@ public BST();
 | `public E removeMaxNR()`       | 从二分搜索树中删除最大值所在节点，返回最大值，非递归方法 |
 | `public void remove(E e)`      | 从二分搜索树中删除元素为e的节点                          |
 | `public String toString()`     | 转换为字符串                                             |
+
+
+
+## MaxHeap
+
+#### 构造器
+
+```java
+public MaxHeap(int capacity)	// 带参构造器，传入最大堆的容量
+public MaxHeap()	// 无参构造器，默认最大堆容量为10
+```
+
+#### 方法
+
+| 方法                       | 详解                             |
+| -------------------------- | -------------------------------- |
+| `public int size()`        | 返回堆中的元素个数               |
+| `public boolean isEmpty()` | 返回一个布尔值，表示堆中是否为空 |
+| `public void add(E e)`     | 向堆中添加元素                   |
+| `public E findMax()`       | 看堆中的最大元素                 |
+| `public E extractMax()`    | 取出堆中最大元素                 |
 
