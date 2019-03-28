@@ -10,8 +10,12 @@ public class MaxHeap<E extends Comparable<E>> {
         data = new Array<>();
     }
 
+    // Heapify 把一个数组变成最大堆
     public MaxHeap(E[] arr){
         data = new Array<>(arr);
+        for(int i = parent(arr.length - 1) ; i >= 0 ; i --){
+            siftDown(i);
+        }
     }
 
     // 返回堆中的元素个数
