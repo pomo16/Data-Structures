@@ -12,6 +12,7 @@
   + [LoopQueue](#LoopQueue)
 + [Binary Search Tree](#Binary-Search-Tree)
 + [MaxHeap](#MaxHeap)
+  + [PriorityQueue](#PriorityQueue)
 
 ## Array
 #### 构造器
@@ -19,6 +20,7 @@
 ```java
 public Array(int capacity);	// 带参构造器，传入数组初始化容量
 public Array();	// 无参构造器，默认数组容量为10
+public Array(E[] arr); // 带参构造器，传入数组构造Array(动态数组)
 ```
 
 #### 方法
@@ -284,11 +286,28 @@ public MaxHeap()	// 无参构造器，默认最大堆容量为10
 
 #### 方法
 
-| 方法                       | 详解                             |
-| -------------------------- | -------------------------------- |
-| `public int size()`        | 返回堆中的元素个数               |
-| `public boolean isEmpty()` | 返回一个布尔值，表示堆中是否为空 |
-| `public void add(E e)`     | 向堆中添加元素                   |
-| `public E findMax()`       | 看堆中的最大元素                 |
-| `public E extractMax()`    | 取出堆中最大元素                 |
+| 方法                       | 详解                                |
+| -------------------------- | ----------------------------------- |
+| `public int size()`        | 返回堆中的元素个数                  |
+| `public boolean isEmpty()` | 返回一个布尔值，表示堆中是否为空    |
+| `public void add(E e)`     | 向堆中添加元素                      |
+| `public E findMax()`       | 看堆中的最大元素                    |
+| `public E extractMax()`    | 取出堆中最大元素                    |
+| `public E replace(E e)`    | 取出堆中的最大元素，并且替换成元素e |
+
+
+
+### PriorityQueue
+
+#### 构造器
+
+```java
+public class PriorityQueue<E extends Comparable<E>> implements Queue<E>
+```
+
+#### 方法
+
+| 方法              | 详解                 |
+| ----------------- | -------------------- |
+| @Override methods | 实现接口中的所有方法 |
 
